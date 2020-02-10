@@ -2,10 +2,104 @@
 <html>
 
 <head>
-	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+	<script src="./js/jquery.min.js"
+			  ></script>
+	<script src="js/experience.js"></script>
+	<script src="js/publication.js"></script>
 </head>
+
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+	<div id="side-menu">
+		<div class="image-package">
+			<div class="top-side">
+				<img class="profile-image" src="https://media-exp1.licdn.com/dms/image/C4E03AQHievMFje-JaA/profile-displayphoto-shrink_200_200/0?e=1586995200&v=beta&t=d7JWeGZ1AuWIhms6t7yIQoRVHzMVfl0Z4Rn3eAml6Z4">
+			</div>
+			<div class="bottom-side">
+				<div class="big-text">
+					Diego Vaquero-Melchor
+				</div>
+				<div class="medium-text">
+					PhD student
+				</div>
+			
+			</div>
+		</div>
+		<div class="side-links">
+
+			<ul>
+				<li id="portfolio-link">Portfolio</li>
+				<li id="publications-link">Publications</li>
+			</ul>
+		</div>
+		<div class="get-in-touch"> 
+			<ul>
+				<!--m a i l-->
+				<li><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+					width="24" height="24"
+					viewBox="0 0 172 172"
+					style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#fff3f5"><path d="M28.66667,28.66667c-7.91917,0 -14.33333,6.41417 -14.33333,14.33333v12.41569l7.16667,4.49316l7.16667,4.49316l57.33333,35.93132l57.33333,-35.69336l7.16667,-4.46517l7.16667,-4.45117v-12.72363c0,-7.91917 -6.41417,-14.33333 -14.33333,-14.33333zM28.66667,43h114.66667v5.51497l-57.33333,35.67936l-57.33333,-35.93132zM14.33333,72.32455v56.67545c0,7.91917 6.41417,14.33333 14.33333,14.33333h114.66667c7.91917,0 14.33333,-6.41417 14.33333,-14.33333v-56.39551l-14.33333,8.91634v47.47917h-114.66667v-47.68913z"></path></g></g>
+				
+				</svg></li>
+				
+				<!--l i n k e-->
+				<li>
+					<a href="https://es.linkedin.com/in/diego-vaquero-melchor-674aa287">
+						<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+						width="24" height="24"
+						viewBox="0 0 172 172"
+						style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#fff3f5"><path d="M141.04,13.76h-110.08c-9.4944,0 -17.2,7.7056 -17.2,17.2v110.08c0,9.4944 7.7056,17.2 17.2,17.2h110.08c9.4944,0 17.2,-7.7056 17.2,-17.2v-110.08c0,-9.4944 -7.7056,-17.2 -17.2,-17.2zM58.48,68.8v65.36h-20.64v-65.36zM37.84,49.7768c0,-4.816 4.128,-8.4968 10.32,-8.4968c6.192,0 10.0792,3.6808 10.32,8.4968c0,4.816 -3.8528,8.7032 -10.32,8.7032c-6.192,0 -10.32,-3.8872 -10.32,-8.7032zM134.16,134.16h-20.64c0,0 0,-31.8544 0,-34.4c0,-6.88 -3.44,-13.76 -12.04,-13.8976h-0.2752c-8.3248,0 -11.7648,7.0864 -11.7648,13.8976c0,3.1304 0,34.4 0,34.4h-20.64v-65.36h20.64v8.8064c0,0 6.6392,-8.8064 19.9864,-8.8064c13.6568,0 24.7336,9.3912 24.7336,28.4144z"></path></g></g>
+						</svg>
+					</a>
+				
+				</li>
+
+				<!--g i t h u -->
+				<li>
+					<a href="https://github.com/rievo">
+						<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+						width="26" height="26"
+						viewBox="0 0 172 172"
+						style=" fill:#000000;"><g fill="none" fill-rule="none" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none" fill-rule="nonzero"></path><g fill="#fff3f5" fill-rule="evenodd"><path d="M86,21.5c-35.63037,0 -64.5,28.86963 -64.5,64.5c0,28.4917 18.47656,52.6792 44.11279,61.20361c3.2334,0.58789 4.40918,-1.38574 4.40918,-3.10742c0,-1.53271 -0.06299,-5.58496 -0.08398,-10.95996c-17.95166,3.88428 -21.73096,-8.65039 -21.73096,-8.65039c-2.93945,-7.45361 -7.15967,-9.44824 -7.15967,-9.44824c-5.85791,-3.98926 0.44092,-3.90528 0.44092,-3.90528c6.4668,0.46192 9.86817,6.63477 9.86817,6.63477c5.75293,9.86817 15.09619,7.0127 18.77051,5.375c0.58789,-4.17822 2.26758,-7.01269 4.09424,-8.62939c-14.31934,-1.6167 -29.37354,-7.15967 -29.37354,-31.87207c0,-7.05469 2.51953,-12.80761 6.63477,-17.32178c-0.65088,-1.6167 -2.87646,-8.18848 0.62989,-17.06982c0,0 5.41699,-1.72168 17.7417,6.61377c5.14404,-1.42773 10.66602,-2.1416 16.14599,-2.16259c5.47998,0.02099 11.00195,0.73486 16.14599,2.16259c12.32471,-8.33545 17.7207,-6.61377 17.7207,-6.61377c3.52734,8.88134 1.32276,15.45313 0.65088,17.06982c4.13623,4.51416 6.61377,10.26709 6.61377,17.32178c0,24.77539 -15.0752,30.21338 -29.43653,31.83008c2.30957,1.97364 4.36719,5.9209 4.36719,11.92578c0,8.6294 -0.06298,15.5791 -0.06298,17.69971c0,1.72168 1.15478,3.7373 4.43017,3.10742c25.61523,-8.54541 44.0708,-32.71192 44.0708,-61.20361c0,-35.63037 -28.86963,-64.5 -64.5,-64.5z"></path></g></g></svg>
+					</a>
+				</li>
+
+
+			</ul>
+		</div>
+
+		<div id="modal-div" class="modal-experience-right hidden">
+			<img id="modal-div-img">
+		</div>
+	</div>
+
+	<div id="main-content">
+
+		<div id="section-title" class="section-header"><h2>Portfolio</h2></div>
+
+		<div id="exp-cont" class="experience-container">
+		</div>
+
+		<div id="section-title" class="section-header"> <h2>Publications</h2> </div>
+		
+		
+		<div id="pub-cont" class="publications">
+
+			
+		</div>
+
+
+		<div id="footer-div">
+
+		</div>
+	</div>
+	
+	  
+	<script src="./js/main.js"></script>
+
 </body>
 </html>
