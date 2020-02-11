@@ -43,7 +43,7 @@ function populateExperiences(){
     highlights:["It extracts information from LAS files, in particular from the Spanish IGN (Instituto Geográfico Nacional)","Then, the service generates a matrix of tiles with heightmaps", "When the service receives a list of coordinates, it generates the minimum heightmap image that holds all of them",
      "In addition to the height map, RGB information of the ground color is stored, also in the form of images", "More layers could be added in the future. For example, it can be combined with machine learning techniques to make annotations in the field (e.g. buildings, water, forests ...)"], 
     techs: ["Node.js", "Tree.js", "GIS", "Microservices", "Image processing"],
-    img_urls: ["./imgs/ground3d.jpg"]
+    img_urls: ["./imgs/groundcaptures/ground3d1.jpg","./imgs/groundcaptures/ground3d2.png","./imgs/groundcaptures/ground3d3.jpg","./imgs/groundcaptures/ground3d4.jpg","./imgs/groundcaptures/ground3d5.jpg","./imgs/groundcaptures/ground3d6.jpg","./imgs/groundcaptures/ground3d7.png"]
     });
     experiences.push(exp_gr);
 
