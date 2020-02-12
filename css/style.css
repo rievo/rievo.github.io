@@ -94,6 +94,24 @@
 	-webkit-box-shadow: 4px 0px 5px -3px rgba(18,0,18,1);
 	-moz-box-shadow: 4px 0px 5px -3px rgba(18,0,18,1);
 	box-shadow: 4px 0px 5px -3px rgba(18,0,18,1);
+
+	/*background: url(./imgs/bg/bg.JPG);*/
+
+	background: 
+
+    linear-gradient(
+		rgba(189, 36, 66,0.85), 
+		rgba(189, 36, 66, 0.85)
+    ),
+
+	url("../imgs/bg/bg.png");
+
+
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+
+	  
   }
 
   #main-content{
