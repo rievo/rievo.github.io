@@ -49,7 +49,7 @@ function populateExperiences(){
 
     let exp_sar = new Experience({title:"SARA: An Architecture for Shared-Augmented Reality experiences and Applications", 
     description:"SARA presents three main strengths. First, it allows building AR-based collaborative applications regardless of the end-devices (mobile or wearable ones). SARA is also able to automatically orchestrate the rules for the collaboration policy needed for the target application. ",
-    highlights:["Cross-platform, multiuser Augmented Reality collaboration"],
+    highlights:["Cross-platform, multiuser Augmented Reality collaboration", "Higlhy Scalable"],
     techs:["Node.js", "C#", "Javascript", "HoloLens", "Unity", "MRTK", "iOS", "ARKit", "Software Architecture", "Microservices"],
     img_urls: ["./imgs/sara_capturethreedevices.PNG"]});
     experiences.push(exp_sar);
@@ -71,7 +71,7 @@ function populateExperiences(){
     let exp_diagram = new Experience({title:"DSL-Comet: A Domain Specific Language visual editor", 
     description:"DSL-comet is an iOS tool that allows graphical, collaborative modelling on mobile devices.",
     highlights:["Our architecture permits creating both Sirius and mobile editors from a single description.", "Models can be stored locally or in a server, and they are compatible with EMF"],
-    techs:["iOS", "Node.js", "MongoDB", "Mongoose"],
+    techs:["iOS", "Node.js", "MongoDB", "Mongoose", "Graphs", "DSL"],
     img_urls:["./imgs/dsl-comet/dsl-comet1.PNG","./imgs/dsl-comet/dsl-comet2.PNG","./imgs/dsl-comet/dsl-comet3.PNG","./imgs/dsl-comet/dsl-comet4.PNG","./imgs/dsl-comet/dsl-comet5.PNG","./imgs/dsl-comet/dsl-comet6.PNG",]});
     experiences.push(exp_diagram);
 
@@ -308,7 +308,17 @@ function populatePublications(){
         link: "https://www.mdpi.com/2076-3417/9/23/5123"
     })
 
+    pub = new Publication({
+        title: "SARA: A Microservice-Based Architecture for Cross-Platform Collaborative Augmented Reality",
+        authorsList: ["Diego Vaquero-Melchor", "Ana M. Bernardos", "Luca Bergesio"],
+        details: "Applied Sciences, 10(6), 2074",
+        year:2020,
+        link: "https://www.mdpi.com/2076-3417/10/6/2074"
+    })
+
     publications.push(pub);
+
+    publications.reverse()
 
 }
 
