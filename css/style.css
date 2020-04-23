@@ -157,7 +157,11 @@
 .image-package img{
 	max-width: 150px;
 	border-radius: 50%;
+	border-style: solid;
+    border-width: 2px;
+    border-color: var(--rgba-secondary-1-0);
 }
+
 
 
 .image-package .big-text{
@@ -215,7 +219,8 @@
 	background-color: clear;
 	margin-bottom: 80px;
 	display:grid;
-	grid-template-columns: repeat(2,1fr);
+	/*grid-template-columns: repeat(2,1fr);*/
+	grid-template-columns: 1fr;
 	grid-row-gap: 20px;
 	grid-column-gap: 20px;
 }
@@ -455,24 +460,24 @@
 .publication .p-title{
 	font-size: 18px;
 
-	color: rgb(51,51,51);
+	color: rgb(75, 59, 62);
 }
 
 .publication .p-details{
 	font-size: 14px;
 
-	color: rgb(117, 99, 103);
+	color: rgb(185, 165, 170);
 }
 .publication .p-year{
 	font-size: 14px;
 
-	color: rgb(117, 99, 103);
+	color: rgb(185, 165, 170);
 }
 
 .publication .p-authors{
 	font-size: 14px;
 
-	color: rgb(117, 99, 103);
+	color: rgb(185, 165, 170);
 }
 
 .p-authors > span{
@@ -539,12 +544,12 @@
 	}
 
 	.experience-middle p{
-		font-size: 14px;
+		font-size: 16px;
 	}
 
 
 	.experience .highlights ul li{
-		font-size: 12px;
+		font-size: 16px;
 	}
 
 	body .technologies ul{

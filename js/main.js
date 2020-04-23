@@ -42,14 +42,14 @@ function populateExperiences(){
     description:"Creation of a microservice that provides heightmaps based on terrain queries.",
     highlights:["It extracts information from LAS files, in particular from the Spanish IGN (Instituto Geográfico Nacional)","Then, the service generates a matrix of tiles with heightmaps", "When the service receives a list of coordinates, it generates the minimum heightmap image that holds all of them",
      "In addition to the height map, RGB information of the ground color is stored, also in the form of images", "More layers could be added in the future. For example, it can be combined with machine learning techniques to make annotations in the field (e.g. buildings, water, forests ...)"], 
-    techs: ["Node.js", "Tree.js", "GIS", "Microservices", "Image processing"],
-    img_urls: ["./imgs/groundcaptures/ground3d1.jpg","./imgs/groundcaptures/ground3d2.png","./imgs/groundcaptures/ground3d3.jpg","./imgs/groundcaptures/ground3d4.jpg","./imgs/groundcaptures/ground3d5.jpg","./imgs/groundcaptures/ground3d6.jpg","./imgs/groundcaptures/ground3d7.png"]
+    techs: ["Node.js", "Tree.js", "GIS", "Microservices", "Image processing", "3D"],
+    img_urls: ["./imgs/groundcaptures/ground3d1.png","./imgs/groundcaptures/ground3d2.png","./imgs/groundcaptures/ground3d3.png","./imgs/groundcaptures/ground3d4.jpg","./imgs/groundcaptures/ground3d5.jpg","./imgs/groundcaptures/ground3d6.jpg","./imgs/groundcaptures/ground3d7.jpg","./imgs/groundcaptures/ground3d8.jpg"]
     });
     experiences.push(exp_gr);
 
     let exp_sar = new Experience({title:"SARA: An Architecture for Shared-Augmented Reality experiences and Applications", 
     description:"SARA presents three main strengths. First, it allows building AR-based collaborative applications regardless of the end-devices (mobile or wearable ones). SARA is also able to automatically orchestrate the rules for the collaboration policy needed for the target application. ",
-    highlights:["Cross-platform, multiuser Augmented Reality collaboration", "Higlhy Scalable"],
+    highlights:["Cross-platform, multiuser Augmented Reality collaboration", "Higlhy Scalable", "The collaboration models can be changed on-the-fly", "More collaboration models could be defined by the user", "SARA has been successfully integrated into the Blender environment. Thanks to the created addon, any 3D scene can be injected in a SARA session"],
     techs:["Node.js", "C#", "Javascript", "HoloLens", "Unity", "MRTK", "iOS", "ARKit", "Software Architecture", "Microservices"],
     img_urls: ["./imgs/sara_capturethreedevices.PNG"]});
     experiences.push(exp_sar);
@@ -64,18 +64,9 @@ function populateExperiences(){
     let exp_mds = new Experience({title:"Mission Definition System web editor", 
     description:"Description here",
     highlights:["The user can create multiple geometrical inspections", "Then, takeoff and landing points for the mission are specified", "The system generates an estimation of the trajectory that follows the shape of the inspections"],
-    techs:["Javascript", "Three.js", "jQuery", "MongoDB", "Mongoose"],
+    techs:["Javascript", "Three.js", "jQuery", "MongoDB", "Mongoose", "GIS", "Websockets"],
     img_urls:["./imgs/mdscaptures/4.png", "./imgs/mdscaptures/1.png", "./imgs/mdscaptures/2.png", "./imgs/mdscaptures/3.png", "./imgs/mdscaptures/5.png", "./imgs/mdscaptures/mdsinterface.png"]});
     experiences.push(exp_mds);
-
-    let exp_diagram = new Experience({title:"DSL-Comet: A Domain Specific Language visual editor", 
-    description:"DSL-comet is an iOS tool that allows graphical, collaborative modelling on mobile devices.",
-    highlights:["Our architecture permits creating both Sirius and mobile editors from a single description.", "Models can be stored locally or in a server, and they are compatible with EMF"],
-    techs:["iOS", "Node.js", "MongoDB", "Mongoose", "Graphs", "DSL"],
-    img_urls:["./imgs/dsl-comet/dsl-comet1.PNG","./imgs/dsl-comet/dsl-comet2.PNG","./imgs/dsl-comet/dsl-comet3.PNG","./imgs/dsl-comet/dsl-comet4.PNG","./imgs/dsl-comet/dsl-comet5.PNG","./imgs/dsl-comet/dsl-comet6.PNG",]});
-    experiences.push(exp_diagram);
-
-    
 
     let exp_antennas = new Experience({title:"A Distributed Drone-Oriented Architecture for In-Flight Object Detection", 
     description:"This is cloud-based architecture that enables real-time video streaming and bundled object detection in a remote control center, taking advantage of the availability of high-speed cellular networks for communications.",
@@ -84,6 +75,12 @@ function populateExperiences(){
     img_urls:["./imgs/antennas.png"]});
     experiences.push(exp_antennas);
 
+    let exp_diagram = new Experience({title:"DSL-Comet: A Domain Specific Language visual editor", 
+    description:"DSL-comet is an iOS tool that allows graphical, collaborative modelling on mobile devices.",
+    highlights:["Our architecture permits creating both Sirius and mobile editors from a single description", "Models can be stored locally or in a server, and they are compatible with EMF","Geographic information can be integrated in the model"],
+    techs:["iOS", "Node.js", "MongoDB", "Mongoose", "Graphs", "DSL"],
+    img_urls:["./imgs/dsl-comet/dsl-comet1.PNG","./imgs/dsl-comet/dsl-comet2.PNG","./imgs/dsl-comet/dsl-comet3.PNG","./imgs/dsl-comet/dsl-comet4.PNG","./imgs/dsl-comet/dsl-comet5.PNG","./imgs/dsl-comet/dsl-comet6.PNG",]});
+    experiences.push(exp_diagram);
 
 }
 
