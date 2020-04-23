@@ -82,6 +82,14 @@ function populateExperiences(){
     img_urls:["./imgs/dsl-comet/dsl-comet1.PNG","./imgs/dsl-comet/dsl-comet2.PNG","./imgs/dsl-comet/dsl-comet3.PNG","./imgs/dsl-comet/dsl-comet4.PNG","./imgs/dsl-comet/dsl-comet5.PNG","./imgs/dsl-comet/dsl-comet6.PNG",]});
     experiences.push(exp_diagram);
 
+    let exp_data_icgc = new Experience({
+        title:"Data mining from the International Cancer Genome Consortium",
+        description:"Use of binary clustering and biclustering techniques in order to find underlying relationships between the catalogs of mutations in the human genome associated with various projects hosted by the International Genome Cancer Consortium",
+        highlights:["In the three projects involved in the study, clusters with the 12 families of genes with the most mutations have been identified", "A subset of 5 cytobands have been identified that should be the subject of future studies to clarify their relationship with the development of liver cancer", "The process can be extended to other types of tumors offered in the ICGC catalog", "A tool has been developed to visualize the position of mutations within human chromosomes"],
+        techs:["Data Analysis", "Data visualization", "Clustering", "Processing", "Three.js" ],
+        img_urls:["./imgs/mutations/lihcus.png", "./imgs/mutations/doncit_us.png", "./imgs/mutations/licafr.png", "./imgs/mutations/lincjp.png"]
+    })
+    experiences.push(exp_data_icgc)
 }
 
 function loadExperiences(){
