@@ -502,6 +502,16 @@
 	font-weight: 600;
 }
 
+#terrain-3d{
+	width: auto;
+	height: auto;
+	text-align: center;
+}
+
+#terrain-3d canvas{
+	display: inline;
+}
+
 @media only screen and (max-width:1200px) {
 
 	#side-menu, #main-content{

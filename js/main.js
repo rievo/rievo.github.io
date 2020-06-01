@@ -21,6 +21,8 @@ loadExperiences();
 populatePublications();
 loadPublications();
 
+//prepare3dterrain();
+
 function prepareInterface(){
     $("#portfolio-link").click(function() {
         $('html, body').animate({
@@ -45,6 +47,7 @@ function populateExperiences(){
     techs: ["Node.js", "Tree.js", "GIS", "Microservices", "Image processing", "3D"],
     img_urls: ["./imgs/groundcaptures/ground3d1.png","./imgs/groundcaptures/ground3d2.png","./imgs/groundcaptures/ground3d3.png","./imgs/groundcaptures/ground3d4.jpg","./imgs/groundcaptures/ground3d5.jpg","./imgs/groundcaptures/ground3d6.jpg","./imgs/groundcaptures/ground3d7.jpg","./imgs/groundcaptures/ground3d8.jpg"]
     });
+    exp_gr.id = "ground-e"
     experiences.push(exp_gr);
 
     let exp_sar = new Experience({title:"SARA: An Architecture for Shared-Augmented Reality experiences and Applications", 
@@ -52,6 +55,7 @@ function populateExperiences(){
     highlights:["Cross-platform, multiuser Augmented Reality collaboration", "Higlhy Scalable", "The collaboration models can be changed on-the-fly", "More collaboration models could be defined by the user", "SARA has been successfully integrated into the Blender environment. Thanks to the created addon, any 3D scene can be injected in a SARA session"],
     techs:["Node.js", "C#", "Javascript", "HoloLens", "Unity", "MRTK", "iOS", "ARKit", "Software Architecture", "Microservices"],
     img_urls: ["./imgs/sara_capturethreedevices.PNG"]});
+    exp_sar.id = "sara-e"
     experiences.push(exp_sar);
 
     let exp_harp = new Experience({title:"HARP: An Architecture for Haptically Enhanced AR Experiences", 
@@ -59,6 +63,7 @@ function populateExperiences(){
     highlights:["Exploring the concept of Harptics","This architecture is implemented as a new layer over SARA."],
     techs:["C#", "HoloLens", "Unity", "MRTK", "UHDK5", "UltraHaptics", "wearable AR", "Software Architecture", "HCI", "Mid-air", "HMD"],
     img_urls:["./imgs/harp.jpg"]});
+    exp_harp.id = "harp-e"
     experiences.push(exp_harp);
 
     let exp_mds = new Experience({title:"Mission Definition System web editor", 
@@ -66,6 +71,7 @@ function populateExperiences(){
     highlights:["The user can create multiple geometrical inspections", "Then, takeoff and landing points for the mission are specified", "The system generates an estimation of the trajectory that follows the shape of the inspections"],
     techs:["Javascript", "Three.js", "jQuery", "MongoDB", "Mongoose", "GIS", "Websockets"],
     img_urls:["./imgs/mdscaptures/4.png", "./imgs/mdscaptures/1.png", "./imgs/mdscaptures/2.png", "./imgs/mdscaptures/3.png", "./imgs/mdscaptures/5.png", "./imgs/mdscaptures/mdsinterface.png"]});
+    exp_mds.id = "mds-e"
     experiences.push(exp_mds);
 
     let exp_antennas = new Experience({title:"A Distributed Drone-Oriented Architecture for In-Flight Object Detection", 
@@ -73,6 +79,7 @@ function populateExperiences(){
     highlights:["The architecture  is ready to handle different types of drones", "To show its capabilities, the architecture is instantiated for a specific use case: the inspection of a telecommunication tower.", "The detection model can be easily changed in real time", "Multiple detection models may be combined (e.g. one detecting antennas and one detecting pedestrians)"],
     techs:["Python", "Tensorflow", "D3.js", "Object Detection", "Convolutional Neural Networks", "Websockets", "Real time"],
     img_urls:["./imgs/antennas.png"]});
+    exp_antennas.id = "antennas-e"
     experiences.push(exp_antennas);
 
     let exp_diagram = new Experience({title:"DSL-Comet: A Domain Specific Language visual editor", 
@@ -80,6 +87,7 @@ function populateExperiences(){
     highlights:["Our architecture permits creating both Sirius and mobile editors from a single description", "Models can be stored locally or in a server, and they are compatible with EMF","Geographic information can be integrated in the model"],
     techs:["iOS", "Node.js", "MongoDB", "Mongoose", "Graphs", "DSL"],
     img_urls:["./imgs/dsl-comet/dsl-comet1.PNG","./imgs/dsl-comet/dsl-comet2.PNG","./imgs/dsl-comet/dsl-comet3.PNG","./imgs/dsl-comet/dsl-comet4.PNG","./imgs/dsl-comet/dsl-comet5.PNG","./imgs/dsl-comet/dsl-comet6.PNG",]});
+    exp_diagram.id = "diagram-e"
     experiences.push(exp_diagram);
 
     let exp_data_icgc = new Experience({
@@ -89,6 +97,7 @@ function populateExperiences(){
         techs:["Data Analysis", "Data visualization", "Clustering", "Processing", "Three.js" ],
         img_urls:["./imgs/mutations/lihcus.png", "./imgs/mutations/doncit_us.png", "./imgs/mutations/licafr.png", "./imgs/mutations/lincjp.png"]
     })
+    exp_data_icgc.id = "icgc-e"
     experiences.push(exp_data_icgc)
 }
 
@@ -97,11 +106,11 @@ function loadExperiences(){
     let container = $("#exp-cont");
     for(let i = 0; i< experiences.length; i++){
         let e = experiences[i];
-        e.id = i;
+       
 
 
         indexForExperiences.push(0);
-        let div_exp = $('<div class="experience"></div>').appendTo(container);
+        let div_exp = $('<div class="experience" id="' + e.id +'"></div>').appendTo(container);
      
 
         let exp_middle = $('<div class="experience-middle"></div>').appendTo(div_exp);
@@ -185,6 +194,9 @@ function loadExperiences(){
         }
     
     }
+
+
+    prepare3dterrain()
 }
 
 
@@ -376,4 +388,11 @@ function loadPublications(){
 
        
    }
+}
+
+function prepare3dterrain(){
+    $("#ground-e").append('<div id="terrain-3d" ></div>')
+    let terrain_viewer = new TerrainLayer('terrain-3d', 400, 400);
+    terrain_viewer.setup();
+    terrain_viewer.mountScene(undefined);
 }
