@@ -53,7 +53,7 @@ function populateExperiences(){
     let exp_sar = new Experience({title:"SARA: An Architecture for Shared-Augmented Reality experiences and Applications", 
     description:"SARA presents three main strengths. First, it allows building AR-based collaborative applications regardless of the end-devices (mobile or wearable ones). SARA is also able to automatically orchestrate the rules for the collaboration policy needed for the target application. ",
     highlights:["Cross-platform, multiuser Augmented Reality collaboration", "Higlhy Scalable", "The collaboration models can be changed on-the-fly", "More collaboration models could be defined by the user", "SARA has been successfully integrated into the Blender environment. Thanks to the created addon, any 3D scene can be injected in a SARA session"],
-    techs:["Node.js", "C#", "Javascript", "HoloLens", "Unity", "MRTK", "iOS", "ARKit", "Software Architecture", "Microservices"],
+    techs:["Node.js", "C#", "Javascript", "HoloLens", "Unity 3D", "MRTK", "iOS", "ARKit", "Software Architecture", "Microservices"],
     img_urls: ["./imgs/sara_capturethreedevices.PNG"]});
     exp_sar.id = "sara-e"
     experiences.push(exp_sar);
@@ -61,7 +61,7 @@ function populateExperiences(){
     let exp_harp = new Experience({title:"HARP: An Architecture for Haptically Enhanced AR Experiences", 
     description:"The objetive of this architecture is to enhance the perception of AR 3D content, while facilitating the generation of applications and allowing various types of haptic devices to be integrated.",
     highlights:["Exploring the concept of Harptics","This architecture is implemented as a new layer over SARA."],
-    techs:["C#", "HoloLens", "Unity", "MRTK", "UHDK5", "UltraHaptics", "wearable AR", "Software Architecture", "HCI", "Mid-air", "HMD"],
+    techs:["C#", "HoloLens", "Unity 3D", "MRTK", "UHDK5", "UltraHaptics", "wearable AR", "Software Architecture", "HCI", "Mid-air", "HMD"],
     img_urls:["./imgs/harp.jpg"]});
     exp_harp.id = "harp-e"
     experiences.push(exp_harp);
@@ -69,7 +69,7 @@ function populateExperiences(){
     let exp_mds = new Experience({title:"Mission Definition System web editor", 
     description:"Description here",
     highlights:["The user can create multiple geometrical inspections", "Then, takeoff and landing points for the mission are specified", "The system generates an estimation of the trajectory that follows the shape of the inspections"],
-    techs:["Javascript", "Three.js", "jQuery", "MongoDB", "Mongoose", "GIS", "Websockets"],
+    techs:["Javascript", "Three.js", "jQuery", "MongoDB", "Mongoose", "GIS"],
     img_urls:["./imgs/mdscaptures/4.png", "./imgs/mdscaptures/1.png", "./imgs/mdscaptures/2.png", "./imgs/mdscaptures/3.png", "./imgs/mdscaptures/5.png", "./imgs/mdscaptures/mdsinterface.png"]});
     exp_mds.id = "mds-e"
     experiences.push(exp_mds);
@@ -77,7 +77,7 @@ function populateExperiences(){
     let exp_antennas = new Experience({title:"A Distributed Drone-Oriented Architecture for In-Flight Object Detection", 
     description:"This is cloud-based architecture that enables real-time video streaming and bundled object detection in a remote control center, taking advantage of the availability of high-speed cellular networks for communications.",
     highlights:["The architecture  is ready to handle different types of drones", "To show its capabilities, the architecture is instantiated for a specific use case: the inspection of a telecommunication tower.", "The detection model can be easily changed in real time", "Multiple detection models may be combined (e.g. one detecting antennas and one detecting pedestrians)"],
-    techs:["Python", "Tensorflow", "D3.js", "Object Detection", "Convolutional Neural Networks", "Websockets", "Real time"],
+    techs:["Python", "Tensorflow", "D3.js", "Object Detection", "Machine Learning", "CNNs", "Real time"],
     img_urls:["./imgs/antennas.png"]});
     exp_antennas.id = "antennas-e"
     experiences.push(exp_antennas);
@@ -324,6 +324,7 @@ function populatePublications(){
         year:2019,
         link: "https://www.mdpi.com/2076-3417/9/23/5123"
     })
+    publications.push(pub);
 
     pub = new Publication({
         title: "SARA: A Microservice-Based Architecture for Cross-Platform Collaborative Augmented Reality",
@@ -332,7 +333,15 @@ function populatePublications(){
         year:2020,
         link: "https://www.mdpi.com/2076-3417/10/6/2074"
     })
+    publications.push(pub);
 
+    pub = new Publication({
+        title: "Doctoral Thesis: Technologies and concepts for enhancing interaction and enabling collaboration in augmented and mixed reality",
+        authorsList: ["Diego Vaquero-Melchor"],
+        details: "https://doi.org/10.20868/UPM.thesis.65850",
+        year:2020,
+        link: "https://oa.upm.es/65850/"
+    })
     publications.push(pub);
 
     publications.reverse()

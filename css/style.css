@@ -506,10 +506,14 @@
 	width: auto;
 	height: auto;
 	text-align: center;
+	
 }
 
 #terrain-3d canvas{
 	display: inline;
+	border-style:solid;
+	border-color: #444;
+	border-width:2px;
 }
 
 @media only screen and (max-width:1200px) {
